@@ -19,3 +19,20 @@ hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('hamburger-active');
     navMenu.classList.toggle('hidden');
 });
+
+// ThemeButton
+const html = document.querySelector('html');
+const buttonDark = document.querySelector('#buttonDark');
+const buttonLight = document.querySelector('#buttonLight');
+
+buttonDark.addEventListener('click', () => {
+    html.classList.add('dark');
+    buttonDark.classList.add('hidden');
+    buttonLight.classList.remove('hidden');
+})
+
+buttonLight.addEventListener('click', () => {
+    html.classList.remove('dark');
+    buttonLight.classList.add('hidden');
+    buttonDark.classList.remove('hidden');
+})
